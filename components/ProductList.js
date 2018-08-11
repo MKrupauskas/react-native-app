@@ -1,29 +1,42 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
+
+import {
+  View as UIView,
+  TextInput as UITextInput,
+  Text as UIText,
+  Button as UIButton
+} from 'react-native-ui-lib';
 
 export default class ProductList extends React.Component {
   render() {
     const items = [
-      { title: 'title', description: 'description' },
-      { title: 'title', description: 'description' },
-      { title: 'title', description: 'description' },
-      { title: 'title', description: 'description' },
-      { title: 'title', description: 'description' },
-      { title: 'title', description: 'description' },
-      { title: 'title', description: 'description' },
-      { title: 'title', description: 'description' },
-      { title: 'title', description: 'description' },
-      { title: 'title', description: 'description' }
+      { name: 'Richard Jefferson', description: 'description' },
+      { name: 'Richard Jefferson', description: 'description' },
+      { name: 'Richard Jefferson', description: 'description' },
+      { name: 'Richard Jefferson', description: 'description' },
+      { name: 'Richard Jefferson', description: 'description' },
+      { name: 'Richard Jefferson', description: 'description' }
     ];
 
     return (
       <ScrollView style={styles.productList}>
         {items.map((item, index) => {
-          const { title, description } = item;
+          let { name, description } = item;
           return (
             <View style={styles.product} key={index}>
-              <Text>{title}</Text>
-              <Text>{description}</Text>
+              <UIButton
+                link
+                onPress={() => {
+                  name = 'YYOU CLICKED MEEE';
+                }}
+              >
+                <UIText blue50 text20>
+                  {name}
+                </UIText>
+                <UIText>{description}</UIText>
+                <UIButton link text70 orange30 label=">" marginT-20 />
+              </UIButton>
             </View>
           );
         })}
@@ -34,13 +47,15 @@ export default class ProductList extends React.Component {
 
 const styles = {
   productList: {
-    display: 'flex',
-    flexWrap: 'wrap',
     height: 100,
-    marginBottom: 90,
-    backgroundColor: 'red'
+    marginBottom: 90
   },
   product: {
+    display: 'flex',
+    // alignItems: 'center',
+    flexDirection: 'column',
+    paddingTop: 30,
+    paddingBottom: 30,
     borderWidth: 1,
     borderColor: '#ddd'
   }

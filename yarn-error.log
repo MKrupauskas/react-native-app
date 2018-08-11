@@ -1,0 +1,50 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\dev\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-ui-lib
+
+PATH: 
+  C:\Users\dev\Desktop\cmder\bin;C:\Users\dev\Desktop\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\dev\Desktop\cmder\vendor\conemu-maximus5;C:\Users\dev\Desktop\cmder\vendor\conemu-maximus5\ConEmu;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\Python27;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\tools\php72;C:\Users\dev\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs;C:\Users\dev\AppData\Roaming\npm;C:\Program Files\Git\mingw64;C:\Program Files\Git\usr\bin;C:\Users\dev\Desktop\cmder
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  8.11.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\dev\Desktop\dev\my-new-project\node_modules\deep-extend\lib'
+
+npm manifest: 
+  {
+    "name": "my-new-project",
+    "main": "node_modules/expo/AppEntry.js",
+    "private": true,
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "eject": "expo eject",
+      "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    },
+    "jest": {
+      "preset": "jest-expo"
+    },
+    "dependencies": {
+      "@expo/samples": "2.1.1",
+      "expo": "29.0.0",
+      "react": "16.3.1",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-29.0.0.tar.gz",
+      "react-navigation": "^2.9.3"
+    },
+    "devDependencies": {
+      "jest-expo": "29.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
